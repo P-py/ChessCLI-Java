@@ -23,4 +23,12 @@ public class Board{
     public Integer getColumns() {
     	return this.columns;
     }
+    //returns a piece based on row and column individually
+    public Piece piece(Integer inputRows, Integer inputColumns) {
+    	return pieces[inputRows][inputColumns];
+    }
+    //returns a piece based on a position object
+    public Piece piece(Position inputPos) {
+    	return pieces[inputPos.getRow()][inputPos.getColumn()];
+    }
 }
