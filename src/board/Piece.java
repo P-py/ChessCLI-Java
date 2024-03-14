@@ -1,15 +1,18 @@
 package board;
 
 public abstract class Piece{
-    private Position piecePositon;
-
-    public abstract Boolean[][] possibleMoves(){
-
+    protected Position piecePosition;
+    private Board board;
+    
+    public Piece() {
     }
-    public Boolean possibleMove(Position position){
-
+    public Piece(Board inputBoard) {
+    	this.board = inputBoard;
+    	this.piecePosition = null;
     }
-    public Boolean isThereAPossibleMove(){
-
+    
+    //should only be accessible in the board package and subclasses from this package
+    protected Board getBoard() {
+    	return this.board;
     }
 }

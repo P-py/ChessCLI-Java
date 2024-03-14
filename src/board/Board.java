@@ -1,25 +1,26 @@
 package board;
 
 public class Board{
-    private Integer row;
-    private Integer column;
+    private Integer rows;
+    private Integer columns;
+    //matrix for the pieces in the board
+    private Piece[][] pieces;
 
-    public Piece piece(Integer row, Integer columns){
-
+    public Board(Integer inputRows, Integer inputColumns){
+    	this.rows = inputRows;
+    	this.columns = inputColumns;
+    	pieces = new Piece[inputRows][inputColumns];
     }
-    public Piece piece(Position position){
-
+    public void setColumns(Integer inputColumns) {
+    	this.columns = inputColumns;
     }
-    public void placePiece(Piece piece, Position position){
-
+    public void setRows(Integer inputRows) {
+    	this.rows = inputRows;
     }
-    public Piece removePiece(Position position){
-
+    public Integer getRows() {
+    	return this.rows;
     }
-    public Boolean positionExists(Position position){
-
-    }
-    public Boolean isThereAPiece(Position position){
-
+    public Integer getColumns() {
+    	return this.columns;
     }
 }

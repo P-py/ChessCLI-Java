@@ -1,9 +1,9 @@
 package board;
 
 public class BoardException extends RuntimeException {
-    private static final long serialVersionID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    public void BoardException(String message){
+    public BoardException(String message){
         super(message);
     }
 }
